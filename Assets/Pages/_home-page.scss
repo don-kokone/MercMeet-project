@@ -1,0 +1,81 @@
+.home-page {
+
+
+    .warrior {
+        position: absolute;
+        height: 68rem;
+        width: auto;
+        z-index: 3;
+        transition: all 0.3s ease-in;
+
+
+
+    }
+
+    .warrior.magician {
+        left: 13%;
+        bottom: -20%;
+    }
+
+    .warrior.sentinel {
+        left: 70%;
+        bottom: -25%
+    }
+
+    .warrior.knight {
+        left: 0;
+        bottom: -20%;
+        height: 75rem;
+
+    }
+
+
+    .warrior:hover {
+        z-index: 5;
+        transform: scale(1.05);
+        filter: none;
+
+    }
+
+    button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 3rem;
+        z-index: 3;
+        text-transform: capitalize;
+        padding: 1rem;
+        transform: translate(-50%, 50%);
+        border-radius: 1rem;
+        border: none;
+        background-color: $color-bloody-red;
+        color: $color-black;
+        font-weight: 700;
+        transition: all 0.3s ease-in;
+        opacity: 0.5;
+
+    }
+
+    button:hover {
+        background-color: $color-black;
+        color: $color-bloody-red;
+        transform: translate(-50%, 50%) scale(1.1);
+        opacity: 1;
+
+    }
+
+    &__container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+
+
+        img {
+            object-position: top center;
+            filter: grayscale(70%);
+        }
+
+    }
+
+}
