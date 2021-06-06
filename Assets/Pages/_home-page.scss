@@ -1,15 +1,27 @@
 .home-page {
 
 
+    &__presentation{
+        font-weight: 1.5rem;
+        color: red;
+        z-index: 10;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-weight: 700;
+        text-shadow: 2px 2px $color-black;
+     
+    }
+
     .warrior {
         position: absolute;
-        height: 68rem;
+        max-height: 68rem;
+        height: 100%;
         width: auto;
         z-index: 3;
         transition: all 0.3s ease-in;
-
-
-
     }
 
     .warrior.magician {
@@ -18,15 +30,21 @@
     }
 
     .warrior.sentinel {
-        left: 70%;
+        left: 75%;
         bottom: -25%
     }
 
     .warrior.knight {
         left: 0;
         bottom: -20%;
-        height: 75rem;
+        max-height: 75rem;
 
+    }
+
+    .warrior.pirate{
+        left: 47%;
+        bottom: -20%;
+        
     }
 
 
@@ -37,37 +55,45 @@
 
     }
 
-    button {
+    &__btn-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 50%;
-        font-size: 3rem;
-        z-index: 3;
-        text-transform: capitalize;
-        padding: 1rem;
-        transform: translate(-50%, 50%);
-        border-radius: 1rem;
-        border: none;
-        background-color: $color-bloody-red;
-        color: $color-black;
-        font-weight: 700;
-        transition: all 0.3s ease-in;
-        opacity: 0.5;
+        z-index: 4;
+        transform: translate(-50%, -50%);
 
-    }
 
-    button:hover {
-        background-color: $color-black;
-        color: $color-bloody-red;
-        transform: translate(-50%, 50%) scale(1.1);
-        opacity: 1;
+        button{
+            margin: 0 1rem;
+            padding: 1rem 1rem;
+            width: 25rem;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            color: $color-bloody-red;
+            background-color: $color-grey;
+            opacity: 0.8;
+            border-radius: 1rem;
+            border: 3px solid $color-black;
+            text-transform: uppercase;
+            transition: transform 0.2s ease-in;
+            
+            &:hover{
+                transform: scale(1.1);
+            }
+            
+        }
+
 
     }
 
     &__container {
         position: relative;
-        width: 100%;
-        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
         overflow: hidden;
 
 
